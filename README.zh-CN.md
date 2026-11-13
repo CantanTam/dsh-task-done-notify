@@ -46,10 +46,16 @@
 于是通知进了历史但不弹窗。带上 `desktop-entry:deepseek-harness` 后，
 Plasma 按已注册的 DeepSeek Harness 策略显示，实测右下角正常弹出。
 
-## 安装 / 生效
+## 安装
 
-已经装进当前 `desktop` profile。**改完代码后请完全退出 DeepSeek Harness
-再打开一次**（桌面端的客户端插件清单只在启动时加载，且旧进程里可能残留旧模块）。
+DSH → 侧边栏 **Plugins** → **Add plugin**，填入：
+
+    github:CantanTam/dsh-task-done-notify
+
+也可以直接选本地目录（本仓库根目录）安装。
+
+安装后宿主部分立即生效；如果 DSH 已经在运行，建议**完全退出再打开一次**，
+确保旧的模块实例被清理干净。
 
 ## 配置
 
@@ -100,4 +106,4 @@ turn 结束发一条、聚焦时跳过、子代理过滤、后台任务补发。
 
 ## License
 
-GPL-3.0-or-later. See [LICENSE](../LICENSE).
+GPL-3.0-or-later. See [LICENSE](LICENSE).
