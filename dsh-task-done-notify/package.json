@@ -1,0 +1,47 @@
+{
+  "name": "dsh-task-done-notify",
+  "version": "0.3.0",
+  "description": "任务完成通知（KDE 橙色竖线，常驻到点击）— critical desktop notifications for DeepSeek Harness turns",
+  "license": "GPL-3.0-or-later",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh-CN.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "notification",
+    "kde",
+    "linux",
+    "notify-send",
+    "task-complete"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CantanTam/dsh-task-done-notify.git"
+  },
+  "homepage": "https://github.com/CantanTam/dsh-task-done-notify#readme",
+  "bugs": {
+    "url": "https://github.com/CantanTam/dsh-task-done-notify/issues"
+  }
+}

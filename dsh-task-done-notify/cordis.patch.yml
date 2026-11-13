@@ -1,0 +1,27 @@
+# dsh-task-done-notify — bundle layer for a DSH profile.
+#
+# One OS-level desktop notification per finished turn (success / error / abort).
+# On Linux it always uses critical urgency: KDE renders it with the orange
+# stripe and keeps it until dismissed. There is no in-app popup — the
+# notification is global and lives entirely in the host process.
+#
+# Every config key is optional — the plugin carries the same defaults.
+# To override a value, add a matching entry to the profile's cordis.patch.yml:
+#
+#   - id: desktop-notify
+#     name: dsh-task-done-notify
+#     config:
+#       notifySubagents: true
+#
+- insert:
+    - id: desktop-notify
+      name: dsh-task-done-notify
+      config:
+        skipWhenFocused: true
+        notifySubagents: false
+        notifyJobsSettled: true
+        taskMaxChars: 60
+        appName: DeepSeek Harness
+        desktopEntry: deepseek-harness
+        icon: deepseek-harness
+        systemExpireMs: 0
